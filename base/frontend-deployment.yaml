@@ -1,0 +1,22 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: interface-frontend
+  namespace: default
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: interface-frontend
+  template:
+    metadata:
+      labels:
+        app: interface-frontend
+    spec:
+      containers:
+        - name: interface-frontend
+          image: 138778713921.dkr.ecr.ap-northeast-2.amazonaws.com/frontend-app:0eedd227
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9000
