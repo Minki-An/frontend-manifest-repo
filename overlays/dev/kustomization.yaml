@@ -3,9 +3,8 @@ kind: Kustomization
 images:
 - name: 138778713921.dkr.ecr.ap-northeast-2.amazonaws.com/frontend-app
   newName: 138778713921.dkr.ecr.ap-northeast-2.amazonaws.com/frontend-app
-  newTag: 665f2f2b
+  newTag: 644ac2bb
 resources:
 - ../../base
 patchesStrategicMerge:
 - frontend-deployment-patch.yaml
-
